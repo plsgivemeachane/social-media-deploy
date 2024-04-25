@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body {
+    background: #310404 url(https://i.ytimg.com/vi/wOvQAhzWCrM/maxresdefault.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Barlow', sans-serif;
+  }
+  .container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1.main, p.demos {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+  }
+  .sp-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: -webkit-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+    background: -moz-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+    background: -ms-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+    background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.7));
+  }
+  .sp-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+  }
+  .sp-container h2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    height: 90px;
+    font-size: 90px;
+    width: 100%;
+    text-align: center;
+    color: transparent;
+    -webkit-animation: blurFadeInOut 3s ease-in  backwards;
+    -moz-animation: blurFadeInOut 3s ease-in  backwards;
+    -ms-animation: blurFadeInOut 3s ease-in  backwards;
+    animation: blurFadeInOut 3s ease-in  backwards;
+  }
+  .sp-container h2.frame-1 {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  .sp-container h2.frame-2 {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  .sp-container h2.frame-3 {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+  }
+  .sp-container h2.frame-4 {
+    font-size: 200px;
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    -ms-animation-delay: 9s;
+    animation-delay: 9s;
+  }
+  .sp-container h2.frame-5 {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+    color: transparent;
+    text-shadow: 0px 0px 1px #fff;
+}
+  .sp-container h2.frame-5 span {
+    -webkit-animation: blurFadeIn 3s ease-in 12s backwards;
+    -moz-animation: blurFadeIn 1s ease-in 12s backwards;
+    -ms-animation: blurFadeIn 3s ease-in 12s backwards;
+    animation: blurFadeIn 3s ease-in 12s backwards;
+    color: transparent;
+    text-shadow: 0px 0px 1px #fff;
+  }
+  .sp-container h2.frame-5 span:nth-child(2) {
+    -webkit-animation-delay: 13s;
+    -moz-animation-delay: 13s;
+    -ms-animation-delay: 13s;
+    animation-delay: 13s;
+  }
+  .sp-container h2.frame-5 span:nth-child(3) {
+    -webkit-animation-delay: 14s;
+    -moz-animation-delay: 14s;
+    -ms-animation-delay: 14s;
+    animation-delay: 14s;
+  }
+  .sp-globe {
+    position: absolute;
+    width: 282px;
+    height: 273px;
+    left: 50%;
+    top: 50%;
+    margin: -137px 0 0 -141px;
+    -webkit-animation: fadeInBack 3.6s linear 14s backwards;
+    -moz-animation: fadeInBack 3.6s linear 14s backwards;
+    -ms-animation: fadeInBack 3.6s linear 14s backwards;
+    animation: fadeInBack 3.6s linear 14s backwards;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -o-transform: scale(5);
+    -ms-transform: scale(5);
+    transform: scale(5);
+  }
+  .sp-circle-link {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    margin-left: -50px;
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    color: #3f1616;
+    font-size: 25px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: fadeInRotate 1s linear 16s backwards;
+    -moz-animation: fadeInRotate 1s linear 16s backwards;
+    -ms-animation: fadeInRotate 1s linear 16s backwards;
+    animation: fadeInRotate 1s linear 16s backwards;
+    -webkit-transform: scale(1) rotate(0deg);
+    -moz-transform: scale(1) rotate(0deg);
+    -o-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+  .sp-circle-link:hover {
+    background: #85373b;
+    color: #fff;
+  }
+  /**/
+  
+  @-webkit-keyframes blurFadeInOut {
+    0% {
+      opacity: 0;
+      text-shadow: 0px 0px 40px #fff;
+      -webkit-transform: scale(1.3);
+    }
+    20%, 75% {
+      opacity: 1;
+      text-shadow: 0px 0px 1px #fff;
+      -webkit-transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      text-shadow: 0px 0px 50px #fff;
+      -webkit-transform: scale(0);
+    }
+  }
+  @-webkit-keyframes blurFadeIn {
+    0% {
+      opacity: 0;
+      text-shadow: 0px 0px 40px #fff;
+      -webkit-transform: scale(1.3);
+    }
+    50% {
+      opacity: 0.5;
+      text-shadow: 0px 0px 10px #fff;
+      -webkit-transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0px 0px 1px #fff;
+      -webkit-transform: scale(1);
+    }
+  }
+  @-webkit-keyframes fadeInBack {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+    }
+    50% {
+      opacity: 0.4;
+      -webkit-transform: scale(2);
+    }
+    100% {
+      opacity: 0.2;
+      -webkit-transform: scale(5);
+    }
+  }
+  @-webkit-keyframes fadeInRotate {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0) rotate(360deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1) rotate(0deg);
+    }
+  }
+  /**/
+  
+  @-moz-keyframes blurFadeInOut {
+    0% {
+      opacity: 0;
+      text-shadow: 0px 0px 40px #fff;
+      -moz-transform: scale(1.3);
+    }
+    20%, 75% {
+      opacity: 1;
+      text-shadow: 0px 0px 1px #fff;
+      -moz-transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      text-shadow: 0px 0px 50px #fff;
+      -moz-transform: scale(0);
+    }
+  }
+  @-moz-keyframes blurFadeIn {
+    0% {
+      opacity: 0;
+      text-shadow: 0px 0px 40px #fff;
+      -moz-transform: scale(1.3);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0px 0px 1px #fff;
+      -moz-transform: scale(1);
+    }
+  }
+  @-moz-keyframes fadeInBack {
+    0% {
+      opacity: 0;
+      -moz-transform: scale(0);
+    }
+    50% {
+      opacity: 0.4;
+      -moz-transform: scale(2);
+    }
+    100% {
+      opacity: 0.2;
+      -moz-transform: scale(5);
+    }
+  }
+  @-moz-keyframes fadeInRotate {
+    0% {
+      opacity: 0;
+      -moz-transform: scale(0) rotate(360deg);
+    }
+    100% {
+      opacity: 1;
+      -moz-transform: scale(1) rotate(0deg);
+    }
+  }
+  /**/
+  
+  @keyframes blurFadeInOut {
+    0% {
+      opacity: 0;
+      text-shadow: 0px 0px 40px #fff;
+      transform: scale(1.3);
+    }
+    20%, 75% {
+      opacity: 1;
+      text-shadow: 0px 0px 1px #fff;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      text-shadow: 0px 0px 50px #fff;
+      transform: scale(0);
+    }
+  }
+  @keyframes blurFadeIn {
+    0% {
+      opacity: 0;
+      text-shadow: 0px 0px 40px #fff;
+      transform: scale(1.3);
+    }
+    50% {
+      opacity: 0.5;
+      text-shadow: 0px 0px 10px #fff;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0px 0px 1px #fff;
+      transform: scale(1);
+    }
+  }
+  @keyframes fadeInBack {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(2);
+    }
+    100% {
+      opacity: 0.2;
+      transform: scale(5);
+    }
+  }
+  @keyframes fadeInRotate {
+    0% {
+      opacity: 0;
+      transform: scale(0) rotate(360deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+
+.login{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#formValidator_login{
+    width:100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#formValidator_login .introduce_login{
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+
+}
+@keyframes slideInleft{
+    from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.introduce_login h1{
+    font-size: 100px ;
+}
+.introduce_login p{
+    font-size: 30px ;
+    animation-name:slideInleft;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay:0s;
+    animation-iteration-count: infinite;
+}
+
+#formValidator_login form{
+    position: relative;
+    display: block;
+    padding: 2.2rem;
+    max-width: 450px;
+    background: linear-gradient(14deg, rgba(2,0,36, 0.8) 0%, rgba(24, 24, 65, 0.7) 66%, 
+              rgb(20, 76, 99) 100%), radial-gradient(circle, rgba(2,0,36, 0.5) 0%, 
+              rgba(32, 15, 53, 0.2) 65%, rgba(14, 29, 28, 0.9) 100%);
+    border: 2px solid #fff;
+    -webkit-box-shadow: rgba(0,212,255) 0px 0px 50px -15px;
+    box-shadow: rgba(0,212,255) 0px 0px 50px -15px;
+    overflow: hidden;
+    z-index: +1;
+    border-radius: 40px;
+}
+.form__all .Name-Form , .form__all .Name-Form {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+    font-size: 40px;
+    text-align: center;
+}
+.input__all{
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin:10px;
+    width: 300px;
+    padding:20px;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+}
+.input__all:focus{
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696,
+               -13px -13px 100px #ffffff;
+}
+.button_login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.button_login .Log_in{
+    width: 220px;
+    height:50px;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    perspective: 30rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+    margin-bottom:10px;
+}
+.form__all .sign_in {
+    width: 220px;
+    height:50px;
+    font-size: 15px;
+    background: transparent;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    perspective: 30rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+    margin-bottom: 10px;
+}
+.sign_in::before ,.Log_in::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(320deg, rgba(0, 140, 255, 0.678), rgba(128, 0, 128, 0.308));
+    z-index: 1;
+    transition:  3s;
+}
+.sign_in:hover::before ,.Log_in:hover::before{
+    animation: rotate 1s;
+    transition: all .5s;
+}
+@keyframes rotate {
+    0% {
+      transform: rotateY(180deg);
+    }
+  
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+.invalid {
+    COLOR: #f33a58;
+}
+.invalid input{
+    border:3px solid #f33a58;
+    transition: 1s all;
+}
+.error-message{
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.showNotification{
+    background-color: #fbfbfe;
+    width: 380px;
+    height: 390px;
+    border-radius: 20px;
+    border: 2px solid #e0e0f2;
+    box-shadow: 0 4px 6px rgba(109,109,147,0.4);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 10px;
+    z-index: 2;
+}
+
+.xicon{
+    display: flex;
+    justify-content: end;
+}
+.xicon .xicon-button{
+    width:max-content;
+    height:max-content;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: red;
+}
+.showNotification #model{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* responsive */
+.loginError{
+    color: red; 
+    display: inline-block;
+    animation: fadeIn 2s ease-in-out forwards; 
+    font-size: 20px;
+    font-weight: 900;
+  }
+  @keyframes fadeIn {
+    from {
+        opacity: 0; 
+        transform: translateY(-10px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+@media only screen and (max-width: 768px) {
+    .introduce_login {
+        text-align: center;
+    }
+    .introduce_login h1 {
+        font-size: 60px;
+    }
+    .introduce_login p {
+        font-size: 20px;
+    }
+    #formValidator_login {
+        flex-direction: column;
+    }
+    #formValidator_login form {
+        width: 90%;
+    }
+    .input__all {
+        width: 100%;
+    }
+    .button_login {
+        flex-direction: column;
+        align-items: center;
+    }
+    .button_login button {
+        width: 100%;
+    }
+    .showNotification {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .introduce_login h1 {
+        font-size: 40px;
+    }
+    .introduce_login p {
+        font-size: 16px;
+    }
+    #formValidator_login form {
+        padding: 20px;
+    }
+    .input__all {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .button_login button {
+        font-size: 14px;
+    }
+    .showNotification {
+        width: 90%;
+    }
+}

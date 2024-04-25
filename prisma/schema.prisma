@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model feedPictures {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  image    String
+  picture  String
+  username String
+}
+
+model feeds {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  content  String
+  image    String
+  username String
+}
+
+model imageAvartars {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  image    String
+  username String @unique
+}
+
+model images {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  image    String
+  username String @unique
+}
+
+model messeger {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  content  String
+  username String
+}
+
+model users {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  email    String @unique
+  password String
+  username String @unique
+}

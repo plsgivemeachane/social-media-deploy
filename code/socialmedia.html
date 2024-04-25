@@ -1,0 +1,276 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/socialmedia.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="social-app">
+        <div class="background">
+            <section class="wrapper">
+                <div id="stars"></div>
+                <div id="stars2"></div>
+                <div id="stars3"></div>
+                <div id="title">
+                </div>
+            </section>  
+        </div>
+        <div class="navbar">
+            <h1 id="icon">UniNet</h1>
+            <ul class="btn">
+                <li id="button-app-1" >
+                    <button class="button-app" onclick="content1(event)"><i class="fa-solid fa-house"></i></button>
+                    <h3 class="word" id="home1" onclick="content1(event)">Home</h3>
+                </li>
+                <li id="button-app-2"> 
+                    <button class="button-app" onclick="content2(event)"><i class="fa-solid fa-envelope"></i></button>
+                    <h3 class="word" id="home2" onclick="content2(event)">Messages</h3>
+                </li>
+                <li id="button-app-3">
+                    <button class="button-app"onclick="content3(event)"><i class="fa-solid fa-user"></i></button>
+                    <h3 class="word" id="home3" onclick="content3(event)">Profile</h3>
+                </li>
+                <li id="button-app-5">
+                    <button class="button-app" onclick="content5(event)"><i class="fa-solid fa-graduation-cap button-app"></i></button>
+                    <h3 class="word" id="home5" onclick="content5(event)">FlashCard</h3>
+                </li>
+                <li id="button-app-6">
+                    <button class="button-app" onclick="content6(event)"><i class="fa-solid fa-envelope"></i></button>
+                    <h3 class="word" id="home6" onclick="content6(event)">Community</h3>
+                </li>
+                <li id="button-app-4">
+                    <button class="button-Tweet" onclick="content4(event)">Post picture </button>
+                </li>
+            </ul>
+        </div>
+        <div class="home"  >
+            <div class="search">
+                <div class="search__wrapper">
+                    <label for="iconsearch"><i class="fa-solid fa-magnifying-glass"></i></label> 
+                    <input type="text" placeholder="Find User" class="searchform" id="iconsearch" onkeyup='hell(event)'>
+                    <div class="user-list">
+                    </div>
+                </div>
+                <div class="tweetBox">
+                    <form action="">
+                        <div class="tweetBox__input">
+                            <img src="/pic/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" alt="">
+                            <input type="text" placeholder="What's up">
+                        </div>
+                        <button class="tweetBox__button">Tweet</button>
+                        <div>
+                            <ul class="post">
+                            </ul>    
+                        </div> 
+                    </form>
+                </div> 
+            </div>
+            <div class="settingAll">
+                <div class="user">
+                    <div>
+                        <h2 id="usernameDisplay">Kew Coder</h2>
+                     </div>
+                    <div class="dropdown">            
+                       <button class="settings"><i class="fa-solid fa-bars"></i></button>
+                        <div class="dropdown-content">
+                            <a  class="changePass" onclick="changepass(event)">Change Password </a>
+                            <a href="/validator">Log Out</a>
+                       </div>
+                    </div>
+                </div>   
+            </div>
+        </div>   
+        <div class="post-container"  style="display: none;">
+            <div class="header">
+                <h1>Make post picture</h1>
+                <button class="tick4"><i class="fa-solid fa-xmark close-icon"></i></button>
+            </div>
+            <div class="content">
+                <img src="" alt="" >
+            </div>
+            <div class="actions">
+                <button class="feed-button">Feed</button>
+                <input type="file" name="myFile" style="display:none" id="inputCoverfeed" accept=".png,.jpg,.jpeg"/>
+                <label for="inputCover" class="image-icon">
+                    <button class="buttonPicture"><i class="fa-solid fa-image" ></i></button>
+                </label>
+            </div>
+        </div>
+        <div class="changePassword" style="display:none">
+            <div class="subscribe">
+                <p>Change Password</p>
+                <i class="fa-solid fa-xmark"  id="tick" onclick="tick(event)"></i>
+                <input placeholder="new password" class="subscribe-input" name="email" type="password">
+                <br>
+                <div class="submit-btn" onclick="changePasswordApi(event)">SUBMIT</div>
+                <span class="NotificationOl"></span>
+            </div>               
+        </div>    
+        <div class="messengerButton">
+            <div class="boxMessenger">
+                <div class="userMessenger">
+                    <input type="text" id="room" placeholder="give me id room">
+                    <button id="btn-join">Join</button>
+                    <span class="error"></span>
+                    <span class="success"></span>
+                </div>
+                <ul id="messenger">
+                </ul>
+                <form action="" id="chatformAll">
+                    <input type="text" id="chat-mess">
+                    <button id="send-chat">send</button>
+                </form>
+            </div>
+        </div>  
+        <div class="CommunityChat" style="display:none">
+            <div class="boxMessenger">
+                <div class="userMessenger">
+                    <h1>Welcome to community chat</h1>
+                </div>
+                <ul id="messengerCommunity"></ul>
+                <form action="" id="chatformAll2">
+                    <input type="text" id="chat-mess-comunity">
+                    <button id="send-chat-comunity">send</button>
+                </form>
+            </div>
+        </div>      
+        <div class="Profile" style="display:none">
+            <div class="cover">
+                <input type="file" name="myFile" style="display:none" id="inputCover" accept=".png,.jpg,.jpeg"/>
+                <img class="imgprofile" onclick="uploadAvartar()"  src="/pic/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" alt="">
+            </div>
+            <div class="id-section">
+                <div class="circle">
+                    <input type="file" name="myFile" style="display:none" id="inputImg" accept=".png,.jpg,.jpeg"/>
+                    <img src="/pic/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg" class="logo" onclick="imgUpload()">                   
+                </div>
+                <div class="id">
+                    <h1 class="user-id">Tyson Westley</h1>
+                </div>
+                <div class="buttons">
+                    <button class="user-plus" onclick="follow(event)">
+                        <i class="fas fa-user-plus followButton"></i>follow
+                    </button>
+                    <button class="ellipsis-h">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flashCard" style="display:none;">
+            <div class="introduceFlashcard">
+                <h1>Welcome to the flashcard learning website</h1>
+            </div>
+            <div class="content">
+                <div class="add-flashcard-con">
+                  <button id="add-flashcard">Add Flashcard</button>
+                </div>
+                <div id="card-con">
+                  <div class="card-list-container"></div>
+                </div>
+              </div>
+              <div class="question-container hide" id="add-question-card">
+                <h2>Add Flashcard</h2>
+                <div class="wrapper">
+                  <div class="error-con">
+                    <span class="hide" id="error">Input fields cannot be empty!</span>
+                  </div>
+                  <i class="fa-solid fa-xmark" id="close-btn"></i>
+                </div>
+                <label for="question">Question:</label>
+                <textarea
+                  class="input"
+                  id="question"
+                  placeholder="Type the question here..."
+                  rows="2"
+                ></textarea>
+                <label for="answer">Answer:</label>
+                <textarea
+                  class="input"
+                  id="answer"
+                  rows="4"
+                  placeholder="Type the answer here..."
+                ></textarea>
+                <button id="save-btn">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/socialmedia.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+    <script>
+        const name = document.querySelector('#usernameDisplay');
+        const chatForm = document.querySelector("#chatformAll2");
+        const chatMes = document.querySelector("#chat-mess-comunity");
+        const messengerList = document.querySelector("#messengerCommunity");
+        socket.on('messenger', data => {
+           const li = document.createElement("li");
+           messengerList.appendChild(li);
+           const user = {
+             username: data.name,
+             content: data.messenger,
+            };
+            const json=JSON.stringify(user)
+           fetch("/create_messenges", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json",
+            },
+            body: json,
+        })
+        .then(res=>{
+            return res.text();
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+        });
+
+        chatForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const messenger = chatMes.value;
+            if(messenger!=""){
+                const messengerData = {
+                name: name.textContent,
+                messenger: messenger
+                  };
+                socket.emit('hello', messengerData);
+                const li = document.createElement("li");
+                li.classList.add("MesengerList")
+                li.innerText = `${name.textContent}: ${messenger}`;
+                messengerList.appendChild(li);
+                chatMes.value= "";
+
+            }
+        });
+         document.addEventListener("DOMContentLoaded", async () => {
+
+            try {
+                const response = await fetch(`/messages`, {
+                    method: 'GET',
+                });
+                if (!response.ok) {
+                    console.error(`Fetch request failed with status: ${response.status}`);
+                    return;
+                }
+
+                const data = await response.json();
+                console.log(data)
+                data.forEach(element => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <h1 class="MesengerList">${element.username}:${element.content}</h1>
+                    `
+                    messengerList.appendChild(li);
+                } ) 
+            } catch (error) {
+                console.error('Error fetching data:', error);
+        }
+});
+    </script>
+</body>
+</html>
